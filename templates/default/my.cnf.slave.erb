@@ -311,6 +311,14 @@ relay-log-recovery = <%= node["percona"]["server"]["relay_log_recovery"] %>
 relay-log = <%= node["percona"]["server"]["relay_log"] %>
 <% end %>
 
+<% if !node["percona"]["server"]["report_port"].empty? %>
+report-port = <%= node["percona"]["server"]["report_port"] %>
+<% end %>
+
+<% if !node["percona"]["server"]["report_host"].empty? %>
+report-host = <%= node["percona"]["server"]["report_host"] %>
+<% end %>
+
 # If you're using replication with chained slaves (A->B->C), you need to
 # enable this option on server B. It enables logging of updates done by
 # the slave thread into the slave's binary log.
