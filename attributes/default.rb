@@ -107,11 +107,15 @@ default["percona"]["server"]["max_binlog_size"]                 = "100M"
 default["percona"]["server"]["binlog_cache_size"]               = "1M"
 default["percona"]["server"]["binlog_format"]                   = "MIXED"
 default["percona"]["server"]["log_bin"]                         = "master-bin"
+default["percona"]["server"]["relay_log_info_repository"]       = "FILE"
+default["percona"]["server"]["relay_log_recovery"]              = false
 default["percona"]["server"]["relay_log"]                       = "slave-relay-bin"
 default["percona"]["server"]["log_slave_updates"]               = false
 default["percona"]["server"]["log_warnings"]                    = true
 default["percona"]["server"]["log_long_format"]                 = false
 default["percona"]["server"]["bulk_insert_buffer_size"]         = "64M"
+default["percona"]["server"]["gtid_mode"]                       = "OFF"
+default["percona"]["server"]["enforce_gtid_consistency"]        = false
 
 # MyISAM Specific
 default["percona"]["server"]["myisam_recover"]                  = "BACKUP"

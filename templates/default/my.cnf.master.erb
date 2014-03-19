@@ -220,6 +220,14 @@ query_cache_limit = <%= node["percona"]["server"]["query_cache_limit"] %>
 # then some rows will not make it to the slave
 sync_binlog = <%= node["percona"]["server"]["sync_binlog"] %>
 
+<% if !node["percona"]["server"]["gtid_mode"].empty? %>
+gtid-mode = <%= node["percona"]["server"]["gtid_mode"] %>
+<% end %>
+
+<% if !node["percona"]["server"]["enforce_gtid_consistency"].empty? %>
+enforce-gtid-consistency = <%= node["percona"]["server"]["enforce_gtid_consistency"] %>
+<% end %>
+
 #
 # Error logging goes to syslog due to /etc/mysql/conf.d/mysqld_safe_syslog.cnf.
 #
