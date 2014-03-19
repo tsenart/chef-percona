@@ -179,9 +179,9 @@ max_connect_errors = <%= node["percona"]["server"]["max_connect_errors"] %>
 # make sure that the open file limit is at least twice this in the
 # mysqld_safe section
 <%- if node['mysql']['version'].to_f >= 5.6 %>
-table_open_cache        = <%= node["percona"]["server"]["table_cache"] %>
+table_open_cache        = <%= node["percona"]["server"]["table_open_cache"] %>
 <%- else %>
-table_cache             = <%= node["percona"]["server"]["table_cache"] %>
+table_open_cache             = <%= node["percona"]["server"]["table_open_cache"] %>
 <%- end %>
 
 #thread_concurrency     = 10

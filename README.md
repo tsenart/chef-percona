@@ -179,7 +179,7 @@ default["percona"]["server"]["thread_cache_size"]               = 16
 default["percona"]["server"]["back_log"]                        = 50
 default["percona"]["server"]["max_connections"]                 = 30
 default["percona"]["server"]["max_connect_errors"]              = 9999999
-default["percona"]["server"]["table_cache"]                     = 8192
+default["percona"]["server"]["table_open_cache"]                = 8192
 default["percona"]["server"]["group_concat_max_len"]            = 4096
 
 # Query Cache Configuration
@@ -380,7 +380,7 @@ Many thanks go to the following [contributors](https://github.com/phlipper/chef-
 * **[@jyotty](https://github.com/jyotty)**
     * specify `binlog_format` in master and slave roles
 * **[@adamdunkley](https://github.com/adamdunkley)**
-    * fix `table_cache` variable for mysql versions 5.6 and above
+    * fix `table_open_cache` variable for mysql versions 5.6 and above
     * remove unnecessary rewind, perform it directly
 * **[@freerobby](https://github.com/freerobby)**
     * add requirements to `Berksfile`
